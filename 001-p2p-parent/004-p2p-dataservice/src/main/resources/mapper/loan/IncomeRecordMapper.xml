@@ -165,4 +165,14 @@
       income_status = #{incomeStatus,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="selectIncomeRecordByIncomeStatusAndCruDate" resultMap="BaseResultMap">
+    select
+        <include refid="Base_Column_List"/>
+    from
+        b_income_record
+    where
+        income_date=CURDATE() and income_status=#{incomeStatusNotFull}
+
+  </select>
 </mapper>

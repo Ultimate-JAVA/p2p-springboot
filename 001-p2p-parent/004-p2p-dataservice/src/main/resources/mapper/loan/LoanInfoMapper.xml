@@ -289,5 +289,12 @@
     where
         id=#{loanId} and version=#{version} and (left_product_money-#{bidMoney})>=0
   </update>
-
+  <select id="selectLoanInfoByProductStatus" resultMap="BaseResultMap" parameterType="int">
+    select
+        <include refid="Base_Column_List"/>
+    from
+        b_loan_info
+    where
+        product_status = #{status}
+  </select>
 </mapper>

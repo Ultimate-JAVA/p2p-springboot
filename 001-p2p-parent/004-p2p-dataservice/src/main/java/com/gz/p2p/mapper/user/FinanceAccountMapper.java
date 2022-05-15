@@ -57,4 +57,6 @@ public interface FinanceAccountMapper {
 
     int updateBidMoney(Map<String, Object> param);
 
+    int updateByUid(Map<String, Object> param);
+
 }

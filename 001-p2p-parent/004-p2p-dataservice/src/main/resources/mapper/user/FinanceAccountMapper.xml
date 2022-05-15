@@ -124,4 +124,13 @@
         uid=#{uid}
   </update>
 
+  <update id="updateByUid">
+    update
+        u_finance_account
+    set
+        available_money=available_money+#{bidMoney}+#{incomeMoney}
+    where
+         uid=#{uid}
+  </update>
+
 </mapper>

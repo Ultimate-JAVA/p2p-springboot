@@ -167,5 +167,13 @@
     limit
         #{currentPage},#{pageSize}
   </select>
+  <select id="selectBidInfoByLoanInfoId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select
+        <include refid="Base_Column_List"/>
+    from
+        b_bid_info
+    where
+        loan_id=#{id}
+  </select>
 
 </mapper>

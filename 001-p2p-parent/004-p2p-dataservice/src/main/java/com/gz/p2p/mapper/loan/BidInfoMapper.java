@@ -61,4 +61,6 @@ public interface BidInfoMapper {
     List<BidInfo> selectBidInfoById(Map<String, Object> param);
 
     List<BidUserVO> selectAllBidUser();
+
+    List<BidInfo> selectBidInfoByLoanInfoId(Integer id);
 }
